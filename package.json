@@ -1,0 +1,26 @@
+{
+  "name": "medication.administration.domain",
+  "version": "0.0.0",
+  "description": "Medication Administration Domain",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Otuekong D Itina",
+  "license": "BSD-2-Clause",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "lodash": "~2.4.1",
+    "mongoose": "~3.8.17",
+    "moment": "~2.8.3",
+    "should": "~4.0.4"
+  },
+  "devDependencies": {
+    "mocha": "~1.21.4",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt": "~0.4.5"
+  }
+}

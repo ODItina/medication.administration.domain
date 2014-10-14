@@ -1,22 +1,24 @@
 /**
  * Created by KP_TerminalUser2 on 02/10/2014.
  */
-var medication_read = require('./read.services/medication');
-var medication_write = require('./write.services/medication');
+var _ = require('lodash');
 
 var medication = require('./dto/medication');
-var drug_regiment = require('./dto/drug_regiment');
+var drugRegiment = require('./dto/drugregiment');
 
 
-exports.dto  = {
+module.exports.dto  = {
     medication: medication,
-    drug_regiment:drug_regiment
+    drugRegiment:drugRegiment
 };
 
-exports.medication_service = {
-    read_service:medication_read,
-    write_service:medication_write
-};
+module.exports.read = _.extend(
+    require('./read.services/medication.read.service')
+);
 
-exports.drug_regiment_service = require('./write.services/drug_regiment');
+
+module.exports.write = _.extend(
+    require('./write.services/medication.write.service'),
+    require('./write.services/drugregiment.write.service')
+);
 
